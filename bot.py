@@ -1,6 +1,5 @@
 import import_data as dt
 import timeit
-from bfs import BFS
 from cell import Cell
 from astar import AStar
 start_time = timeit.default_timer()
@@ -31,8 +30,6 @@ grid[i][j] = 'x'
 i = start.x
 j = start.y
 grid[i][j] = 's'
-
-##shortest_path = BFS(start, coin).find_shortest_path(grid)
 shortest_path = AStar(start, coin).find_shortest_path(grid)
 stop_time = timeit.default_timer()
 print('Time: ', stop_time - start_time)
