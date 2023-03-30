@@ -2,7 +2,6 @@ import import_data as dt
 import timeit
 from cell import Cell
 from astar import AStar
-start_time = timeit.default_timer()
 obstacle_lst = dt.data['obstacles']
 raw_start = dt.data['bot']
 raw_coin = dt.data['coin']
@@ -31,6 +30,3 @@ i = start.x
 j = start.y
 grid[i][j] = 's'
 shortest_path = AStar(start, coin).find_shortest_path(grid)
-stop_time = timeit.default_timer()
-print('Time: ', stop_time - start_time)
-print(shortest_path)
